@@ -8,6 +8,6 @@ void main()  {
   int edad = 10;
   double salario = 786.56;
 
-  print(empleados);
+  print(edad);
   print(salario);
 }

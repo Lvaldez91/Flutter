@@ -4,7 +4,7 @@ void main(){
 //   datos.nombre = 'Lucero';
 //   datos.apellido = 'Valdez';
 
-  print( wolverine );
+  print( datos );
 }
 
 

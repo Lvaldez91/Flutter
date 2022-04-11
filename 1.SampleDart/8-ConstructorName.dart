@@ -26,6 +26,6 @@ class Caracteristicas {
     this.apellido  = json['poder'] ?? 'No tiene poder';
 
   String toString() {
-    return 'Nombre: ${this.nombre}, Apellido: ${ this.poder }';
+    return 'Nombre: ${this.nombre}, Apellido: ${ this.apellido }';
   }
 }

@@ -1,9 +1,13 @@
+
+// https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3
+// un mixins en dart es una forma de reutilizar el código de una clase en varias jearquias de clases
 abstract class Animal { }
 
 abstract class Mamifero extends Animal { }
 abstract class Ave extends Animal { }
 abstract class Pez extends Animal { }
 
+// Caracteristicas de acciones de un animal.
 abstract class Volador {
   void volar() => print('estoy volando');
 }
@@ -16,6 +20,7 @@ abstract class Nadador {
   void nadar() => print('estoy nadando');
 }
 
+// exitiende a un comportamiento Mamifero el mixins [with] es nadador
 class Delfin extends Mamifero with Nadador{}
 
 class Murcielago extends Mamifero with Caminante, Volador {}

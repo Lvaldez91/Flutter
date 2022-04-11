@@ -1,31 +1,27 @@
 void main(){
-  
-  final wolverine = new Heroe(nombre:'Logan', poder: 'Regeneración');
-  
-//   wolverine.nombre = 'Logan';
-//   wolverine.poder = 'Regeneración';
-  
+  final datos = new Caracteristicas(nombre:'Lucero', apellido: 'Valdez');
+
+//   datos.nombre = 'Lucero';
+//   datos.apellido = 'Valdez';
+
   print( wolverine );
-  
 }
 
 
-class Heroe {
-  
+class Caracteristicas {
+
   String nombre;
-  String poder;
-  
-  Heroe({ 
-    required this.nombre, 
-    required this.poder 
+  String apellido;
+
+  Caracteristicas({
+    required this.nombre,
+    required this.apellido
   });
-  
 //   Heroe( String pNombre ) {
 //     this.nombre = pNombre;
 //   }
-  
-  
+
   String toString() {
-    return 'Heroe: nombre: ${this.nombre}, poder: ${ this.poder }';
+    return 'Nombre: nombre: ${this.nombre}, Apellido: ${ this.apellido }';
   }
 }

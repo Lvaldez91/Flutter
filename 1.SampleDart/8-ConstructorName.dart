@@ -1,31 +1,31 @@
 void main(){
   final rawJson = {
-    'nombre': 'Tony Stark',
-    'poder': 'Dinero'
+    'nombre': 'Luz Maria',
+    'apellido': 'Valdez'
   };
 //   final ironman = new Heroe( nombre: rawJson['nombre']!, poder: rawJson['poder']! );
-  final ironman = Heroe.fromJson( rawJson );
+  final datos = Caracteristicas.fromJson( rawJson );
 
-  print(ironman);
+  print(datos);
 //   final wolverine = new Heroe(nombre:'Logan', poder: 'Regeneración');
 //   print( wolverine );
 }
 
 
-class Heroe {
+class Caracteristicas {
   String nombre;
-  String poder;
+  String apellido;
 
-  Heroe({
+  Caracteristicas({
     required this.nombre,
-    required this.poder
+    required this.apellido
   });
 
-  Heroe.fromJson( Map<String, String> json  ):
+  Caracteristicas.fromJson( Map<String, String> json  ):
     this.nombre = json['nombre']!,
-    this.poder  = json['poder'] ?? 'No tiene poder';
+    this.apellido  = json['poder'] ?? 'No tiene poder';
 
   String toString() {
-    return 'Heroe: nombre: ${this.nombre}, poder: ${ this.poder }';
+    return 'Nombre: ${this.nombre}, Apellido: ${ this.poder }';
   }
 }

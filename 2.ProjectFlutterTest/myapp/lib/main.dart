@@ -1,5 +1,6 @@
 // siempre debe tener un main
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
 
 void main() {
   runApp(const AppWidget());
@@ -12,7 +13,8 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // le colocamos const porque MaterialApp no cambia, Center o Text tampoco por eso es constante
     return const MaterialApp(
-      home: Center(child: Text('Hello World')),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
     );
   }
 }

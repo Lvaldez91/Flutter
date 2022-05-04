@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-class CounterScreen extends StatelessWidget {
+class CounterScreen extends StatefulWidget {
   const CounterScreen({Key? key}) : super(key: key);
 
   @override
+  State<CounterScreen> createState() => _CounterScreenState();
+}
+
+class _CounterScreenState extends State<CounterScreen> {
+  // out for paramaters
+  int counts = 0;
+  @override
   Widget build(BuildContext context) {
     const fontSize30 = TextStyle(fontSize: 50);
-    int counts = 0;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AppBar Home'),
+        title: const Text('AppBar CounterScreen'),
         elevation: 1.0,
         backgroundColor: Colors.purple,
       ),
@@ -22,12 +29,37 @@ class CounterScreen extends StatelessWidget {
           ],
         ),
       ),
-      //floatingActionButtonLocation: FloatingActionButtonLocation.miniEndDocked,
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          counts++;
-        },
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            child: const Icon(Icons.add),
+            onPressed: () => {
+              // function anonime
+              setState(() => counts++),
+            },
+          ),
+          // const SizedBox(
+          //   width: 10,
+          // ),
+          FloatingActionButton(
+            child: const Icon(Icons.exposure_minus_1_outlined),
+            onPressed: () => {
+              // function anonime
+              setState(() => counts--),
+            },
+          ),
+          // const SizedBox(
+          //   width: 10,
+          // ),
+          FloatingActionButton(
+            child: const Icon(Icons.restart_alt),
+            onPressed: () => {
+              setState(() => counts = 0),
+            },
+          )
+        ],
       ),
     );
   }

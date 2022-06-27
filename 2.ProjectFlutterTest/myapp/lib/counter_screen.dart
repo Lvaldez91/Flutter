@@ -1,4 +1,5 @@
-// ignore: avoid_web_libraries_in_flutter
+import 'dart:developer';
+import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -91,7 +92,7 @@ class CustomFloatingActions extends StatelessWidget {
         // ),
         FloatingActionButton(
           child: const Icon(Icons.restart_alt),
-          onPressed: () => resetCreseFn(),
+          onPressed: () => increseFn(),
         )
       ],
     );
